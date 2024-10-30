@@ -2,17 +2,13 @@
 * {
     font-family: 'Bebas Neue', sans-serif;
 }
-body{
-    
- background-image: url('../fundo.webp');
- background-size: cover; 
- background-position: center; 
- background-repeat: no-repeat; 
- background-attachment: fixed; 
-
- 
-    
-    
+body {
+    background-image: url('../fundo.webp');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: scroll; /* Altere aqui para scroll */
+    min-height: 100vh; /* Adicione altura mínima */
 }
 /* Navbar com efeito transparente e degradê */
 .navbar {
