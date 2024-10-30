@@ -4,7 +4,7 @@
 }
 body{
     
- background-image: url('../fundo.png');
+ background-image: url('../fundo.webp');
  background-size: cover; /* Faz a imagem cobrir a tela toda */
  background-position: center; /* Centraliza a imagem */
  background-repeat: no-repeat; /* Impede a repetição da imagem */
