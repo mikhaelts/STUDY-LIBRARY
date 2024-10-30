@@ -9,9 +9,9 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mokoto&display=swap" rel="stylesheet">
-
 </head>
 <body>
+    
     <!-- Navbar -->
     <header class="navbar">
         <div class="navbar-container">
@@ -35,15 +35,13 @@
 
     <!-- Banner de conteúdo recomendado -->
     <section class="banner" style="background-image: url('assets/banner.png');">
-      
     </section>
 
-   
     <main>
         <section class="content-section" id="aws">
             <h2>Estudos AWS</h2>
             <div class="carousel-container">
-                <button class="carousel-button left" onclick="scrollCarousel(-1)">&#10094;</button>
+                <button class="carousel-button left" onclick="scrollCarousel('carousel-aws', -1)">&#10094;</button>
                 <div class="carousel" id="carousel-aws">
                     <div class="carousel-item" onclick="openPDF('pdfs/Introdução a Computação em nuvem.pdf')">
                         <img src="assets/introdução a AWS.jpeg" alt="AWS - Introdução">
@@ -74,48 +72,45 @@
                         <p>Ferramentas de Gerenciamento</p>
                     </div>
                 </div>
-                <button class="carousel-button right" onclick="scrollCarousel(1)">&#10095;</button>
+                <button class="carousel-button right" onclick="scrollCarousel('carousel-aws', 1)">&#10095;</button>
             </div>
         </section>
-    </main>
 
-
-    <main>
-        <section class="content-section" id="aws">
+        <section class="content-section" id="linux">
             <h2>Estudos Linux</h2>
             <div class="carousel-container">
-                <button class="carousel-button left" onclick="scrollCarousel(-1)">&#10094;</button>
-                <div class="carousel" id="carousel-aws">
-                    <div class="carousel-item" onclick="openPDF('pdfs/Introdução a Computação em nuvem.pdf')">
-                        <img src="assets/introduçãolinux.jpeg" alt="Linux - Introdução ao Linix">
+                <button class="carousel-button left" onclick="scrollCarousel('carousel-linux', -1)">&#10094;</button>
+                <div class="carousel" id="carousel-linux">
+                    <div class="carousel-item" onclick="openPDF('pdfs/Introdução ao Linux.pdf')">
+                        <img src="assets/introduçãolinux.jpeg" alt="Linux - Introdução ao Linux">
                         <p>Introdução Ao Linux</p>
                     </div>
-                    <div class="carousel-item" onclick="openPDF('aws-ec2.pdf')">
-                        <img src="assets/computação.jpeg" alt="AWS - Serviços de Computação">
+                    <div class="carousel-item" onclick="openPDF('linux-computação.pdf')">
+                        <img src="assets/computação.jpeg" alt="Linux - Serviços de Computação">
                         <p>Serviços de Computação</p>
                     </div>
-                    <div class="carousel-item" onclick="openPDF('armazenamento.pdf')">
-                        <img src="assets/armazenamento.jpeg" alt="AWS - Armazenamento e Banco de Dados">
+                    <div class="carousel-item" onclick="openPDF('linux-armazenamento.pdf')">
+                        <img src="assets/armazenamento.jpeg" alt="Linux - Armazenamento e Banco de Dados">
                         <p>Armazenamento e Banco de Dados</p>
                     </div>
-                    <div class="carousel-item" onclick="openPDF('aws-ec2.pdf')">
-                        <img src="assets/Redes.jpeg" alt="AWS - Redes">
+                    <div class="carousel-item" onclick="openPDF('linux-redes.pdf')">
+                        <img src="assets/Redes.jpeg" alt="Linux - Redes">
                         <p>Redes e Conectividade</p>
                     </div>
-                    <div class="carousel-item" onclick="openPDF('aws-ec2.pdf')">
-                        <img src="assets/segurança.jpeg" alt="AWS - Segurança">
+                    <div class="carousel-item" onclick="openPDF('linux-seguranca.pdf')">
+                        <img src="assets/segurança.jpeg" alt="Linux - Segurança">
                         <p>Segurança e Identidade</p>
                     </div>
-                    <div class="carousel-item" onclick="openPDF('aws-ec2.pdf')">
-                        <img src="assets/monitoramento.jpeg" alt="AWS - Monitoramento">
+                    <div class="carousel-item" onclick="openPDF('linux-monitoramento.pdf')">
+                        <img src="assets/monitoramento.jpeg" alt="Linux - Monitoramento">
                         <p>Monitoramento e Otimização</p>
                     </div>
-                    <div class="carousel-item" onclick="openPDF('aws-ec2.pdf')">
-                        <img src="assets/gerenciamento.jpeg" alt="AWS - Gerenciamento">
+                    <div class="carousel-item" onclick="openPDF('linux-gerenciamento.pdf')">
+                        <img src="assets/gerenciamento.jpeg" alt="Linux - Gerenciamento">
                         <p>Ferramentas de Gerenciamento</p>
                     </div>
                 </div>
-                <button class="carousel-button right" onclick="scrollCarousel(1)">&#10095;</button>
+                <button class="carousel-button right" onclick="scrollCarousel('carousel-linux', 1)">&#10095;</button>
             </div>
         </section>
     </main>
@@ -125,8 +120,8 @@
             window.open(pdfPath, '_blank'); // Abre o PDF em uma nova aba
         }
 
-        function scrollCarousel(direction) {
-            const carousel = document.getElementById('carousel-aws');
+        function scrollCarousel(carouselId, direction) {
+            const carousel = document.getElementById(carouselId);
             const scrollAmount = 250; // quantidade a rolar por clique
             carousel.scrollBy({
                 top: 0,
@@ -135,7 +130,7 @@
             });
         }
     </script>
-    
+
     <script src="js/app.js"></script>
   
 </body>
