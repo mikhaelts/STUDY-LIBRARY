@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#201267">
+    <title>Biblioteca de Estudos</title>
+    <link rel="preload" href="/fundo.webp" as="image">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mokoto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="navbar-container">
+            <h1 class="logo">
+                <img src="assets/logo22.png" alt="Logo da Minha Biblioteca" />
+                STUDY LIBRARY
+            </h1>
+            <nav>
+                <a href="#inicio">Início</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Categorias</button>
+                    <div class="dropdown-content">
+                        <a href="#aws">Estudos AWS</a>
+                        <a href="#linux">Estudos Linux</a>
+                        <a href="#cybersecurity">Cibersegurança</a>
+                        <a href="#quiz">Quiz</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner" style="background-image: url('assets/banner.png');">
+    </section>
+
+    <main>
+        <section class="content-section" id="aws">
+            <h2>Estudos AWS</h2>
+            <div class="carousel-container">
+                <button class="carousel-button left" onclick="scrollCarousel('carousel-aws', -1)">&#10094;</button>
+                <div class="carousel" id="carousel-aws">
+                    <div class="carousel-item" onclick="openPDF('pdfs/Introdução a Computação em nuvem.pdf')">
+                        <img src="assets/introdução a AWS.jpeg" alt="AWS - Introdução">
+                        <p>Introdução à AWS</p>
+                    </div>
+                    <div class="carousel-item" onclick="openPDF('pdfs/computação.pdf')">
+                        <img src="assets/computação.jpeg" alt="AWS - Serviços de Computação">
+                        <p>Serviços de Computação</p>
+                    </div>
+                    <div class="carousel-item" onclick="openPDF('pdfs/armazenamento.pdf')">
+                        <img src="assets/armazenamento.jpeg" alt="AWS - Armazenamento e Banco de Dados">
+                        <p>Armazenamento e Banco de Dados</p>
+                    </div>
+                    <div class="carousel-item" onclick="openPDF('pdfs/redes.pdf')">
+                        <img src="assets/Redes.jpeg" alt="AWS - Redes">
+                        <p>Redes e Conectividade</p>
+                    </div>
+                    <div class="carousel-item" onclick="openPDF('pdfs/segurança.pdf')">
+                        <img src="assets/segurança.jpeg" alt="AWS - Segurança">
+                        <p>Segurança e Identidade</p>
+                    </div>
+                    <div class="carousel-item" onclick="openPDF('pdfs/monitoramento.pdf')">
+                        <img src="assets/monitoramento.jpeg" alt="AWS - Monitoramento">
+                        <p>Monitoramento e Otimização</p>
+                    </div>
+                    <div class="carousel-item" onclick="openPDF('pdfs/gerenciamento.pdf')">
+                        <img src="assets/gerenciamento.jpeg" alt="AWS - Gerenciamento">
+                        <p>Ferramentas de Gerenciamento</p>
+                    </div>
+                </div>
+                <button class="carousel-button right" onclick="scrollCarousel('carousel-aws', 1)">&#10095;</button>
+            </div>
+        </section>
+
+        <section class="content-section" id="linux">
+            <h2>Estudos Linux</h2>
+            <div class="carousel-container">
+                <button class="carousel-button left" onclick="scrollCarousel('carousel-linux', -1)">&#10094;</button>
+                <div class="carousel" id="carousel-linux">
+                    <div class="carousel-item" onclick="openPDF('pdfs/Introducaolinux.pdf')">
+                        <img src="assets/introduçãolinux.jpeg" alt="Linux - Introdução ao Linux">
+                        <p>Introdução Ao Linux</p>
+                    </div>
+                    <div class="carousel-item" onclick="openPDF('pdfs/linhadecomando.pdf')">
+                        <img src="assets/CLI.jpeg" alt="Linux - CLI">
+                        <p>Linha de Comando</p>
+                    </div>
+                    <div class="carousel-item" onclick="openPDF('pdfs/gerenciamento.pdf')">
+                        <img src="assets/Gerenciamento de Pacotes.png" alt="Linux - Gerenciamento de pacotes">
+                        <p>Gerenciamento de Pacotes</p>
+                    </div>
+                    <div class="carousel-item" onclick="openPDF('pdfs/usuarios.pdf')">
+                        <img src="assets/usuarios.png" alt="Linux - Usuários e permissões">
+                        <p>Gerenciamento de Usuários e Permissões</p>
+                    </div>
+                    <div class="carousel-item" onclick="openPDF('pdfs/seguranca.pdf')">
+                        <img src="assets/segurançalinux.jpeg" alt="Linux - Segurança linux">
+                        <p>Segurança em Linux</p>
+                    </div>
+                    <div class="carousel-item" onclick="openPDF('pdfs/arquivos.pdf')">
+                        <img src="assets/arquivoslinux.jpeg" alt="Linux - Sistema de arquivos">
+                        <p>Sistema de Arquivos</p>
+                    </div>
+                    <div class="carousel-item" onclick="openPDF('pdfs/redes.pdf')">
+                        <img src="assets/redeslinux.jpeg" alt="Linux - Redes">
+                        <p>Redes no Linux</p>
+                    </div>
+                </div>
+                <button class="carousel-button right" onclick="scrollCarousel('carousel-linux', 1)">&#10095;</button>
+            </div>
+        </section>
+
+        <section class="content-section" id="cybersecurity">
+            <h2>Estudos de Cibersegurança</h2>
+            <div class="carousel-container">
+                <button class="carousel-button left" onclick="scrollCarousel('carousel-cybersecurity', -1)">&#10094;</button>
+                <div class="carousel" id="carousel-cybersecurity">
+                    <div class="carousel-item" onclick="openPDF('pdfs/fundamentosciber.pdf')">
+                        <img src="assets/fundamentosciber.jpg" alt="Cibersegurança - Fundamentos">
+                        <p>Fundamentos da Cibersegurança</p>
+                    </div>
+                    <div class="carousel-item" onclick="openPDF('pdfs/segurancederedes.pdf')">
+                        <img src="assets/segurançaderedes.jpeg" alt="Cibersegurança - Segurança de Redes">
+                        <p>Segurança de Redes</p>
+                    </div>
+                    <div class="carousel-item" onclick="openPDF('pdfs/criptografia.pdf')">
+                        <img src="assets/Criptografiaegestao.jpg" alt="Cibersegurança - Criptografia">
+                        <p>Criptografia e Gestão de Chaves</p>
+                    </div>
+                    <div class="carousel-item" onclick="openPDF('pdfs/segurancadeaplicacoes.pdf')">
+                        <img src="assets/segurançadeaplicações.jpeg" alt="Cibersegurança - Segurança de Aplicações">
+                        <p>Segurança de Aplicações</p>
+                    </div>
+                    <div class="carousel-item" onclick="openPDF('pdfs/gestaodevulnerabilidades.pdf')">
+                        <img src="assets/gestaodevunerabilidades.jpeg" alt="Cibersegurança - Gestão de Vulnerabilidades">
+                        <p>Gestão de Vulnerabilidades e Patches</p>
+                    </div>
+                    <div class="carousel-item" onclick="openPDF('pdfs/securidadecloud.pdf')">
+                        <img src="assets/sergurançaemclouddevsecops.jpg" alt="Cibersegurança - Segurança em Cloud">
+                        <p>Segurança em Cloud e DevSecOps</p>
+                    </div>
+                    <div class="carousel-item" onclick="openPDF('pdfs/monitoramentodetecao.pdf')">
+                        <img src="assets/monitoramentodeameaças.jpeg" alt="Cibersegurança - Monitoramento">
+                        <p>Monitoramento e Detecção de Ameaças</p>
+                    </div>
+                </div>
+                <button class="carousel-button right" onclick="scrollCarousel('carousel-cybersecurity', 1)">&#10095;</button>
+            </div>
+        </section>
+
+        <section class="content-section" id="quiz">
+            <h2>Teste Seus Conhecimentos "QUIZ"</h2>
+            <div class="carousel-container">
+                <button class="carousel-button left" onclick="scrollCarousel('carousel-quiz', -1)">&#10094;</button>
+                <div class="carousel" id="carousel-quiz"> <!-- ID do carrossel -->
+                    <div class="carousel-item">
+                        <a href="https://quiz-aws-snowy.vercel.app/" target="_blank">
+                            <img src="assets/quizaws.jpeg" alt="quiz">
+                        </a>
+                        <p>QUIZ AWS</p>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="link-para-o-quiz-linux.html" target="_blank">
+                            <img src="assets/quizlinux.jpg" alt="quiz">
+                        </a>
+                        <p>QUIZ Linux</p>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="link-para-o-quiz-ciberseguranca.html" target="_blank">
+                            <img src="assets/quizciber.jpeg" alt="quiz">
+                        </a>
+                        <p>QUIZ Cibersegurança</p>
+                    </div>
+                </div>
+                <button class="carousel-button right" onclick="scrollCarousel('carousel-quiz', 1)">&#10095;</button> <!-- ID do carrossel -->
+            </div>
+        </section>
+        
+        
+        
+    </main>
+
+    <script>
+        function openPDF(url) {
+            window.open(url, '_blank');
+        }
+
+        function scrollCarousel(carouselId, direction) {
+            const carousel = document.getElementById(carouselId);
+            const itemWidth = carousel.querySelector('.carousel-item').offsetWidth; // Largura do item do carrossel
+            const itemsCount = carousel.querySelectorAll('.carousel-item').length; // Total de itens
+            const visibleItems = Math.floor(carousel.offsetWidth / itemWidth); // Itens visíveis no carrossel
+            const totalScrollWidth = itemWidth * itemsCount; // Largura total do carrossel
+
+            // Calcula a nova posição de scroll
+            let newScrollLeft = carousel.scrollLeft + (direction * itemWidth);
+
+            // Ajusta para não ultrapassar os limites
+            if (newScrollLeft < 0) {
+                newScrollLeft = 0;
+            } else if (newScrollLeft > totalScrollWidth - (visibleItems * itemWidth)) {
+                newScrollLeft = totalScrollWidth - (visibleItems * itemWidth);
+            }
+
+            carousel.scrollLeft = newScrollLeft;
+        }
+    </script>
+
+    <footer class="footer">
+        <p>&copy; 2024 STUDY LIBRARY. Desenvolvido Por <a class="mikhael" href="https://www.linkedin.com/in/mikhael-tellys/">Mikhael Tellys</a></p>
+    </footer>
+
+</body>
+</html>
